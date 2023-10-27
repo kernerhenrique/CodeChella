@@ -1,0 +1,163 @@
+.banner{
+  background-image: url(../../../../assets/imagens/experience.jpg);
+  background-position: left center;
+  background-size: cover;
+  z-index: -1;
+  height: 420px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.363); /* Adicione uma camada semitransparente */
+}
+
+.banner h2{
+  color: rgb(51, 51, 51);
+  align-self: center;
+  font-size: 4rem;
+}
+
+.background{
+  background-image: linear-gradient(rgb(191, 218, 230) 0%, rgb(252, 240, 221) 50%, rgb(250, 207, 157) 100%);
+}
+
+.first-block{
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.first-block-img img{
+  height: 23.75rem;
+  width: 33rem;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.first-block-text{
+  align-self: center;
+}
+
+.first-block-text h2{
+  color: rgb(51, 51, 51);
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.first-block-text p{
+  line-height: 2.5rem;
+  width: 37.5rem;
+  font-size: 20px;
+}
+
+.second-block{
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 50px;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.second-block-img img{
+  height: 23.75rem;
+  width: 33rem;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.second-block-text{
+  align-self: center;
+}
+
+.second-block-text h2{
+  color: rgb(51, 51, 51);
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.second-block-text p{
+  text-align: right;
+  line-height: 2.5rem;
+  width: 37.5rem;
+  font-size: 20px;
+}
+
+.third-block{
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.third-block-img img{
+  height: 23.75rem;
+  width: 33rem;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.third-block-text{
+  align-self: center;
+}
+
+.third-block-text h2{
+  color: rgb(51, 51, 51);
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.third-block-text p{
+  line-height: 2.5rem;
+  width: 37.5rem;
+  font-size: 20px;
+}
+
+@media(max-width: 458px){
+  .banner h2{
+    font-size: 3rem;
+  }
+}
+
+@media(max-width:1190px){
+  .first-block, .second-block, .third-block{
+    flex-direction: column;
+  }
+
+  .first-block-text h2, .second-block-text h2, .third-block-text h2,
+  .first-block-text p, .second-block-text p, .third-block-text p,
+  .first-block-img, .second-block-img, .third-block-img{
+    text-align: center;
+    margin: auto;
+  }
+}
+
+@media(max-width: 636px){
+  .first-block-text p, .second-block-text p, .third-block-text p{
+    width: 30rem;
+  }
+
+  .first-block-img img, .second-block-img img, .third-block-img img{
+    width: 400px;
+    height: 350px;
+  }
+}
+
+@media(max-width: 500px){
+  .first-block-text p, .second-block-text p, .third-block-text p{
+    width: 23rem;
+  }
+
+  .first-block-img img, .second-block-img img, .third-block-img img{
+    width: 300px;
+    height: 250px;
+  }
+}

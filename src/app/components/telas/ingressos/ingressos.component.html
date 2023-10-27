@@ -1,0 +1,81 @@
+<section class="banner">
+  <h2 class="ff-title">Garanta já seu ingresso</h2>
+</section>
+<div class="background">
+  <h2 class="ff-title ingressos-title">Preencha o formulário a seguir</h2>
+  <section class="form">
+    <form action="" class="form-ingressos" [formGroup]="formulario">
+      <label for="name" class="ff-normal">Nome Completo:</label>
+      <input type="text" name="name" placeholder="Insira seu nome" id="name" formControlName="nome" [(ngModel)]="nome">
+      <div class="alert" *ngIf="formulario.get('nome')?.errors?.['required'] && formulario.get('nome')?.touched">
+        Esse campo é obrigatório
+      </div>
+      <div class="alert" *ngIf="formulario.get('nome')?.errors?.['minlength'] && formulario.get('nome')?.touched">
+        Nome precisa de no mínimo 5 caractéres!
+      </div>
+
+      <label for="email" class="ff-normal">E-mail:</label>
+      <input type="email" name="email" placeholder="Insira seu e-mail" id="email" formControlName="email">
+      <div class="alert" *ngIf="formulario.get('email')?.errors?.['required'] && formulario.get('email')?.touched">
+        Esse campo é obrigatório
+      </div>
+      <div class="alert" *ngIf="formulario.get('email')?.errors?.['email'] && formulario.get('email')?.touched">
+        Digite um e-mail válido
+      </div>
+
+      <fieldset>
+        <div class="form-double">
+          <label for="name" class="ff-normal">Setor:</label>
+          <select name="sector" id="sector" formControlName="sector" [(ngModel)]="sector">
+            <option value="" disabled selected>Escolha um setor</option>
+            <option value="Pista Premium">Pista Premium</option>
+            <option value="Pista Comum">Pista Comum</option>
+            <option value="Cadeiras">Cadeiras</option>
+            <option value="Cadeiras Superiores">Cadeiras Superiores</option>
+          </select>
+          <div class="alert" *ngIf="formulario.get('sector')?.errors?.['required'] && formulario.get('sector')?.touched">
+            Por favor, escolha um setor.
+          </div>
+        </div>
+
+        <div class="form-double">
+          <label for="name" class="ff-normal">Data do evento:</label>
+          <select name="date" id="date" formControlName="date" [(ngModel)]="date">
+            <option value="" disabled selected>Escolha uma data</option>
+            <option value="Sábado">Sábado</option>
+            <option value="Domingo">Domingo</option>
+          </select>
+          <div class="alert" *ngIf="formulario.get('date')?.errors?.['required'] && formulario.get('date')?.touched">
+            Por favor, escolha uma data.
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <div class="form-double">
+          <label for="name" class="ff-normal">Tipo do ingresso</label>
+          <select name="type" id="type" formControlName="type" [(ngModel)]="type">
+            <option value="" disabled selected>Tipo do ingresso</option>
+            <option value="Interia">Interia</option>
+            <option value="Meia">Meia</option>
+          </select>
+          <div class="alert" *ngIf="formulario.get('type')?.errors?.['required'] && formulario.get('type')?.touched">
+            Por favor, escolha um tipo de ingresso.
+          </div>
+        </div>
+
+        <div class="form-double">
+          <label for="birth" class="ff-normal">Data de nascimento:</label>
+          <input type="date" id="birth" name="birth" formControlName="birth">
+          <div class="alert" *ngIf="formulario.get('birth')?.errors?.['required'] && formulario.get('birth')?.touched">
+            Esse campo é obrigatório
+          </div>
+          <div class="alert" *ngIf="formulario.get('birth')?.errors?.['idadeMinima'] && formulario.get('birth')?.touched">
+            Você precisa ter pelo menos 18 anos
+          </div>
+        </div>
+      </fieldset>
+      <button class="btn-action" type="submit" (click)="validarFormulario()"><span>Avançar!</span></button>
+    </form>
+  </section>
+</div>

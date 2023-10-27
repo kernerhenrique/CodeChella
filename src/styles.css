@@ -1,0 +1,53 @@
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Pacifico&family=Raleway:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+
+.ff-normal { font-family: 'Raleway', sans-serif; }
+.ff-title { font-family: 'Calistoga', serif; }
+
+.btn-action{
+  padding: 1rem;
+  border: none;
+  background-color: rgb(46, 123, 162);
+  color: white;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 6px 7px 5px 0px rgba(89,89,89,1);
+  margin: auto;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.btn-action span{
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn-action span:after{
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn-action:hover span {
+  padding-right: 25px;
+}
+
+.btn-action:hover span:after {
+  opacity: 1;
+  right: 0;
+}

@@ -1,0 +1,124 @@
+.banner{
+  background-image: url(../../../../assets/imagens/general-info.jpg);
+  background-position: center center;
+  background-size: cover;
+  z-index: -1;
+  height: 420px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.363); /* Adicione uma camada semitransparente */
+}
+
+.banner h2{
+  color: rgb(51, 51, 51);
+  align-self: center;
+  font-size: 4rem;
+}
+
+.background{
+  background-image: linear-gradient(180deg, #BFDAE6 0%, #FCF0DD 50%, #FACF9D 100%);
+}
+
+.informacoes-title{
+  margin: 0;
+  font-size: 2.5rem;
+  padding: 3rem;
+  color: rgb(51, 51, 51);
+  text-align: center;
+}
+
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.accordion-wrapper {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+  margin:0 auto;
+}
+
+.accordion {
+  margin: auto;
+  width: 56.25rem;
+  color: white;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.accordion:last-child{
+  margin-bottom: 0;
+}
+
+.accordion-label {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding: 16px;
+  background: rgba(4,57,94,.8);
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 23px;
+}
+
+.accordion-label::after {
+  content: "\276F";
+  width: 1rem;
+  height: 16px;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.accordion-content {
+  max-height: 0;
+  padding: 0 16px;
+  color: rgba(4,57,94,1);
+  background: white;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.accordion-content p{
+  margin: 0;
+  color: rgba(4,57,94,.7);
+  font-size: 20px;
+}
+
+input:checked + .accordion-label::after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+input:checked ~ .accordion-content {
+  max-height: 100vh;
+  padding: 1.5rem;
+}
+
+@media(max-width: 935px){
+  .accordion{
+    width: 35rem;
+  }
+}
+
+@media(max-width: 600px){
+  .accordion{
+    width: 23rem;
+  }
+
+  .banner h2{
+    font-size: 2.5rem;
+  }
+}

@@ -1,0 +1,250 @@
+.banner{
+  background-image: url(../../../../assets/imagens/sectors.jpg);
+  background-position: center center;
+  background-size: cover;
+  z-index: -1;
+  height: 420px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.363); /* Adicione uma camada semitransparente */
+}
+
+.banner h2{
+  color: rgb(51, 51, 51);
+  align-self: center;
+  font-size: 4rem;
+}
+
+.background{
+  background-image: linear-gradient(180deg, #BFDAE6 0%, #FCF0DD 50%, #FACF9D 100%);
+}
+
+.mapa-legenda{
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.map{
+  align-self: center;
+}
+
+.legenda{
+  align-self: center;
+}
+
+.legenda ul{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size: 1.25rem;
+  justify-self: center;
+  list-style: none;
+}
+
+.legenda ul li{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+span{
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+
+.legenda ul li:first-of-type > span {
+  background-color: rgb(14, 125, 241);
+}
+.legenda ul li:nth-of-type(2) > span {
+  background-color: rgb(254, 1, 110);
+}
+.legenda ul li:nth-of-type(3) > span {
+  background-color: rgb(1, 168, 158);
+}
+.legenda ul li:nth-of-type(4) > span {
+  background-color: rgb(63, 81, 181);
+}
+.legenda ul li:last-of-type > span {
+  background-image: url(../../../../assets/imagens/wheel-chair.png);
+}
+
+.details-title{
+  color: rgb(51, 51, 51);
+  font-size: 2.5rem;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.details{
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  place-items: start center;
+}
+
+.pista{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 0px;
+}
+
+.pista img{
+  border-radius: 1rem;
+  object-fit: cover;
+  height: 16rem;
+  width: 25rem;
+  margin: auto;
+}
+
+.pista-text h2{
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: rgb(51, 51, 51);
+}
+
+.pista-text p{
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 2.5rem;
+}
+
+.pista-premium{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 10rem 0px;
+}
+
+.pista-premium img{
+  border-radius: 1rem;
+  object-fit: cover;
+  height: 16rem;
+  width: 25rem;
+  margin: auto;
+}
+
+.pista-premium-text h2{
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: rgb(51, 51, 51);
+}
+
+.pista-premium-text p{
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 2.5rem;
+}
+
+.cadeiras{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 0px;
+}
+
+.cadeiras img{
+  border-radius: 1rem;
+  object-fit: cover;
+  height: 16rem;
+  width: 25rem;
+  margin: auto;
+}
+
+.cadeiras-text h2{
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: rgb(51, 51, 51);
+}
+
+.cadeiras-text p{
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 2.5rem;
+}
+
+
+@media(max-width: 1359px){
+  .details{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pista, .pista-premium, .cadeiras{
+    margin: auto;
+  }
+
+  .pista-premium-text p, .pista-text p, .cadeiras-text p{
+    width: 60rem;
+  }
+
+  .pista-premium{
+    padding: 0;
+  }
+}
+
+@media(max-width: 1010px){
+  .pista-premium-text p, .pista-text p, .cadeiras-text p{
+    width: 30rem;
+  }
+}
+
+@media(max-width: 990px){
+  .mapa-legenda{
+    flex-direction: column;
+  }
+}
+
+@media(max-width: 700px){
+  .map img{
+    width: 550px;
+    height: 500px;
+  }
+}
+
+@media(max-width: 556px){
+  .map img{
+    width: 400px;
+    height: 350px;
+  }
+
+  .pista-premium-text p, .pista-text p, .cadeiras-text p{
+    width: 20rem;
+    margin: auto;
+  }
+}
+
+@media(max-width: 506px){
+  .banner h2{
+    font-size: 3rem;
+  }
+}
+
+@media(max-width: 492px){
+  .cadeiras img, .pista img, .pista-premium img{
+    height: 11rem;
+    width: 20rem;
+  }
+}
